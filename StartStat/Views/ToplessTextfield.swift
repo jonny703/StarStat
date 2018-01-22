@@ -1,9 +1,9 @@
 //
 //  ToplessTextfield.swift
-//  Fishing
+//  StartStat
 //
-//  Created by John Nik on 12/8/17.
-//  Copyright © 2016 johnik703. All rights reserved.
+//  Created by John Nik on 1/20/18.
+//  Copyright © 2018 johnik703. All rights reserved.
 //
 
 //        let testTextfield = ToplessTextField(frame: CGRect(x: 20, y: 20, width: 100, height: 60))

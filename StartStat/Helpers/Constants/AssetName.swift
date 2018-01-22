@@ -1,9 +1,9 @@
 //
 //  AssetName.swift
-//  Motivr
+//  StartStat
 //
-//  Created by John Nik on 12/27/17.
-//  Copyright © 2017 jonik703. All rights reserved.
+//  Created by John Nik on 1/20/18.
+//  Copyright © 2018 johnik703. All rights reserved.
 //
 
 import UIKit

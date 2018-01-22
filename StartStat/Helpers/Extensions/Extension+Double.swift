@@ -2,10 +2,9 @@
 //  Extension+Double.swift
 //  StartStat
 //
-//  Created by PAC on 1/21/18.
-//  Copyright © 2018 PAC. All rights reserved.
+//  Created by John Nik on 1/20/18.
+//  Copyright © 2018 johnik703. All rights reserved.
 //
-
 import Foundation
 
 extension Double {
