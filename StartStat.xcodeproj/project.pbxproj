@@ -274,7 +274,7 @@
 				TargetAttributes = {
 					076B436D20136BF200674BA8 = {
 						CreatedOnToolsVersion = 9.1;
-						ProvisioningStyle = Automatic;
+						ProvisioningStyle = Manual;
 					};
 				};
 			};
@@ -530,13 +530,16 @@
 			baseConfigurationReference = 610AEA04D1CB797A0378C2F8 /* Pods-StartStat.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = AHA5JS655T;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = 6G33WN5PC3;
 				INFOPLIST_FILE = StartStat/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = caesar.StartStat;
+				PRODUCT_BUNDLE_IDENTIFIER = com.surveystar.starstat;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "ab66ccbe-3915-4910-9217-10e3216bab4b";
+				PROVISIONING_PROFILE_SPECIFIER = starstat_distributionnew;
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -547,13 +550,16 @@
 			baseConfigurationReference = 38DBA4A1073CEBDE9552E260 /* Pods-StartStat.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = AHA5JS655T;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = 6G33WN5PC3;
 				INFOPLIST_FILE = StartStat/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = caesar.StartStat;
+				PRODUCT_BUNDLE_IDENTIFIER = com.surveystar.starstat;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "ab66ccbe-3915-4910-9217-10e3216bab4b";
+				PROVISIONING_PROFILE_SPECIFIER = starstat_distributionnew;
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

@@ -48,12 +48,38 @@ class HomeController: UIViewController {
         
     }()
     
+    lazy var visitButton: UIButton = {
+        
+        let button = UIButton(type: .system)
+        let image = UIImage(named: AssetName.homeIcon.rawValue)
+        button.setImage(image, for: .normal)
+        button.setTitle("Visit our website", for: .normal)
+        button.setTitleColor(.black, for: .normal)
+        button.tintColor = .black
+        button.titleLabel?.font = UIFont.systemFont(ofSize: 20)
+        button.addTarget(self, action: #selector(handleVisitWebsite), for: .touchUpInside)
+        return button
+    }()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         setupViews()
     }
 
+}
+
+extension HomeController {
+    
+    @objc fileprivate func handleVisitWebsite() {
+        guard let destinationUrl = URL(string: "http://www.surveystar.com/") else { return }
+        if #available(iOS 10.0, *) {
+            UIApplication.shared.open(destinationUrl, options: [:], completionHandler: nil)
+        } else {
+            UIApplication.shared.openURL(destinationUrl)
+        }
+    }
+    
 }
 
 extension HomeController: UITableViewDelegate, UITableViewDataSource {
@@ -118,7 +144,7 @@ extension HomeController {
         
         view.addSubview(tableView)
         
-        _ = tableView.anchor(questionLabel.bottomAnchor, left: view.leftAnchor, bottom: view.bottomAnchor, right: view.rightAnchor, topConstant: 20, leftConstant: 20, bottomConstant: 0, rightConstant: 20, widthConstant: 0, heightConstant: 0)
+        _ = tableView.anchor(questionLabel.bottomAnchor, left: view.leftAnchor, bottom: visitButton.topAnchor, right: view.rightAnchor, topConstant: 20, leftConstant: 20, bottomConstant: 0, rightConstant: 20, widthConstant: 0, heightConstant: 0)
         
     }
     
@@ -126,6 +152,9 @@ extension HomeController {
         
         view.addSubview(titleLabel)
         _ = titleLabel.anchor(self.topLayoutGuide.bottomAnchor, left: view.leftAnchor, bottom: nil, right: view.rightAnchor, topConstant: 10, leftConstant: 20, bottomConstant: 0, rightConstant: 0, widthConstant: 0, heightConstant: 30)
+        
+        
+        
         
         view.addSubview(questionLabel)
         _ = questionLabel.anchor(titleLabel.bottomAnchor, left: view.leftAnchor, bottom: nil, right: view.rightAnchor, topConstant: 50, leftConstant: 20, bottomConstant: 0, rightConstant: 0, widthConstant: 0, heightConstant: 30)
@@ -136,12 +165,23 @@ extension HomeController {
         
         view.backgroundColor = StyleGuideManager.mainYellowBackgroundColor
         
-        let imageView = UIImageView()
-        let image = UIImage(named: AssetName.appIcon.rawValue)
-        imageView.image = image
+        let iconImageView = UIImageView()
+        let iconImage = UIImage(named: AssetName.appIcon.rawValue)
+        iconImageView.image = iconImage
         
-        view.addSubview(imageView)
-        _ = imageView.anchor(topLayoutGuide.bottomAnchor, left: nil, bottom: nil, right: view.rightAnchor, topConstant: 0, leftConstant: 0, bottomConstant: 0, rightConstant: 0, widthConstant: 150, heightConstant: 150)
+        view.addSubview(iconImageView)
+        _ = iconImageView.anchor(topLayoutGuide.bottomAnchor, left: nil, bottom: nil, right: view.rightAnchor, topConstant: 0, leftConstant: 0, bottomConstant: 0, rightConstant: 0, widthConstant: 150, heightConstant: 150)
+        
+        let nameImageView = UIImageView()
+        let image = UIImage(named: AssetName.appName.rawValue)
+        nameImageView.image = image
+        
+        view.addSubview(nameImageView)
+        _ = nameImageView.anchor(topLayoutGuide.bottomAnchor, left: nil, bottom: nil, right: iconImageView.leftAnchor, topConstant: 10, leftConstant: 0, bottomConstant: 0, rightConstant: -10, widthConstant: 206, heightConstant: 78)
+        
+        
+        view.addSubview(visitButton)
+        _ = visitButton.anchor(nil, left: nil, bottom: view.bottomAnchor, right: view.rightAnchor, topConstant: 0, leftConstant: 0, bottomConstant: 20, rightConstant: 10, widthConstant: 200, heightConstant: 40)
     }
     
     private func setupNavBar() {

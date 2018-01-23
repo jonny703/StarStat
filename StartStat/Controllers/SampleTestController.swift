@@ -153,10 +153,10 @@ extension SampleTestController {
         let sigresult95 = se * 1.96 * 100
         let sigresult99 = se * 2.576 * 100
         
-        result1TextField.text = "+/- " + sigresult80.clean + " %"
-        result2TextField.text = "+/- " + sigresult90.clean + " %"
-        result3TextField.text = "+/- " + sigresult95.clean + " %"
-        result4TextField.text = "+/- " + sigresult99.clean + " %"
+        result1TextField.text = "+/- " + sigresult99.clean + " %"
+        result2TextField.text = "+/- " + sigresult95.clean + " %"
+        result3TextField.text = "+/- " + sigresult90.clean + " %"
+        result4TextField.text = "+/- " + sigresult80.clean + " %"
     }
     
     private func checkInvalid() -> Bool {

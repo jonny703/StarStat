@@ -14,7 +14,9 @@ enum AssetName: String {
     case alertIcon = "alertIcon"
     
     case appIcon = "appicon"
+    case appName = "appname"
     
+    case homeIcon = "home"
     case starIcon = "star"
     case backIcon = "left_arrow"
     case infoIcon = "information"

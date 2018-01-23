@@ -88,7 +88,7 @@ class ZTestController: UIViewController {
     
     let proportionHelpLabel: UILabel = {
         let label = UILabel()
-        label.text = "(Please enter in decimal format, for example, 92.9% should be enterned\nas .929)"
+        label.text = "(Please enter in decimal format, for example, 92.9% should be entered\nas .929)"
         label.textColor = .darkGray
         label.font = UIFont.systemFont(ofSize: 17)
         label.numberOfLines = 3
